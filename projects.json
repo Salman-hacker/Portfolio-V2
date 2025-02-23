@@ -1,0 +1,28 @@
+{
+  "projects": [
+    {
+      "title": "HACKATHON",
+      "description": "My hackathon Test 2024.",
+      "owner": "Muhammad Salman",
+      "github": "https://salman-hackathon-test.netlify.app/"
+    },
+    {
+      "title": "Projects Library",
+      "description": " Work in progress",
+      "owner": "Muhammad Salman",
+      "github": "#"
+    },
+    {
+      "title": "FOOD PANDA",
+      "description": " FOOD PANDA Assingment",
+      "owner": "Muhammad Salman",
+      "github": "https://salman-foodpanda.netlify.app/"
+    },
+    {
+      "title": "HACKING",
+      "description": "Work in progress.",
+      "owner": "Muhammad Salman",
+      "github": "#"
+    }
+  ]
+}
