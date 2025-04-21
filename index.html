@@ -946,6 +946,56 @@ UI/UX design focuses on creating user-friendly interfaces and enhancing user exp
 
     <!-- bootstrap js -->
     <script src="assets/js/bootstrap.min.js"></script>
+
+    <script>document.addEventListener('DOMContentLoaded', function() {
+  const follower = document.querySelector('.cursor-follower');
+  
+  let mouseX = 0;
+  let mouseY = 0;
+  let cursorX = 0;
+  let cursorY = 0;
+  
+  // Premium smooth follow effect (lower = smoother)
+  const ease = 0.08;
+  
+  // Track mouse position
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+  
+  // Optional: Detect interactive elements
+  const interactiveElements = document.querySelectorAll('a, button, input, select, textarea, [role="button"]');
+  
+  interactiveElements.forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      follower.classList.add('hover');
+    });
+    
+    el.addEventListener('mouseleave', () => {
+      follower.classList.remove('hover');
+    });
+  });
+  
+  // Animation loop
+  function animate() {
+    // Calculate distance with premium easing
+    let dx = mouseX - cursorX;
+    let dy = mouseY - cursorY;
+    
+    cursorX += dx * ease;
+    cursorY += dy * ease;
+    
+    // Apply position
+    follower.style.left = `${cursorX}px`;
+    follower.style.top = `${cursorY}px`;
+    
+    requestAnimationFrame(animate);
+  }
+  
+  // Start animation
+  animate();
+});</script>
   </body>
 </html>
 z
