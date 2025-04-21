@@ -8,6 +8,34 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+
+/* Premium Cursor Follower */
+body {
+  cursor: none; /* Hide default cursor */
+}
+
+.cursor-follower {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px); /* For Safari */
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+/* Optional: Style for when hovering over interactive elements */
+.cursor-follower.hover {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.25);
+}
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
